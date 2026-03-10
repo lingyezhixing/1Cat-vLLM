@@ -108,14 +108,13 @@ python -m pip install --upgrade pip setuptools wheel
 This branch currently builds the SM70 AWQ kernels against selected
 TurboMind sources from `lmdeploy`.
 
-Clone `lmdeploy` into the repository root and apply the local compatibility
+Initialize the pinned `lmdeploy` submodule and apply the local compatibility
 patch before building:
 
 ```bash
 cd /path/to/vllm
 
-git clone https://github.com/InternLM/lmdeploy.git lmdeploy
-git -C lmdeploy checkout e5df4e8336cd44a1c6e3e358ebd8c9b246932d99
+git submodule update --init --recursive lmdeploy
 git -C lmdeploy apply ../tools/lmdeploy-sm70.patch
 ```
 
@@ -123,8 +122,9 @@ Notes:
 
 - The patch currently adds the required `cuda_bf16.h` include and extends the
   SM70 kernel registry for group sizes used by this branch.
-- If you already have a prepared `lmdeploy/` tree in the repository root, you
-  can skip the clone step but the patch still needs to be applied.
+- The submodule is pinned to commit `e5df4e8336cd44a1c6e3e358ebd8c9b246932d99`.
+- If you cloned the repository without submodules, run the command above before
+  building.
 
 ### 4. Install dependencies
 

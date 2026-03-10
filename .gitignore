@@ -242,7 +242,6 @@ ep_kernels_workspace/
 vllm/grpc/vllm_engine_pb2.py
 vllm/grpc/vllm_engine_pb2_grpc.py
 vllm/grpc/vllm_engine_pb2.pyi
-lmdeploy/
-1Cat-vLLM-0.0.1.zip
+1Cat-vLLM.zip
 vllm-开源备份.zip
-1Cat-vLLM-0.0.1/
+1Cat-vLLM/

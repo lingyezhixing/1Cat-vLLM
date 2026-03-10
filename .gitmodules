@@ -1,0 +1,3 @@
+[submodule "lmdeploy"]
+	path = lmdeploy
+	url = https://github.com/InternLM/lmdeploy.git
