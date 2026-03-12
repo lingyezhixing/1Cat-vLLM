@@ -1,4 +1,4 @@
-# vLLM SM70 AWQ Branch
+# 1Cat-vLLM-0.0.1——A vLLM SM70 AWQ Branch
 
 An experimental vLLM fork for **Tesla V100 / SM70** that enables
 **AWQ 4-bit inference on Volta GPUs**.
@@ -7,6 +7,12 @@ Upstream vLLM AWQ kernels require **SM75+** in the default path. This branch
 integrates **lmdeploy TurboMind SM70 WMMA kernels** and a set of SM70-specific
 runtime fixes so that V100 can serve modern AWQ models, including dense,
 MoE, and selected multimodal models.
+
+## Recommend model providers:
+
+- tclf90/Qwen3.5-35B-A3B-AWQ
+- tclf90/Qwen3.5-27B-AWQ
+- tclf90/Qwen3.5-122B-A10-AWQ
 
 ## What this branch adds
 
